@@ -68,5 +68,3 @@
 /* Article layout padding fix */
 .article-layout{padding-top:0!important}
 
-/* Blend portrait left edge into blue panel */
-.portrait-frame::before{content:'';position:absolute;left:0;top:0;bottom:0;width:32px;z-index:2;background:linear-gradient(90deg,#c8cfe8 0%,transparent 100%);pointer-events:none}
