@@ -31,7 +31,7 @@ export default async function Article({params}:{params:Promise<{slug:string}>}){
 
   return <>
     {/* Hero */}
-    <section className="page-hero article-hero">
+    <section className="page-hero article-hero" style={{paddingBottom:'32px'}}>
       <div className="container">
         <Link href="/blog" className="back-link"><ArrowLeft size={18}/> BACK TO ARTICLES</Link>
         <div className="eyebrow"><span className="eyebrow-line"/> ARCHIVE / {dateLabel(p.date).toUpperCase()}</div>
