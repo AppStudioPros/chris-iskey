@@ -43,3 +43,9 @@
 .outsmart-cta{display:inline-flex;align-items:center;gap:6px;font-size:10px;letter-spacing:1.5px;font-weight:800;color:#a83347}
 @media(max-width:960px){.outsmart-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.outsmart-grid{grid-template-columns:1fr}.vp-badge{display:none}}
+
+/* VP as primary logo */
+.vp-main-logo{display:flex;align-items:center;flex-shrink:0}
+.vp-main-logo img{height:64px;width:auto;object-fit:contain}
+@media(max-width:960px){.vp-main-logo img{height:52px}}
+@media(max-width:700px){.vp-main-logo img{height:44px}}
