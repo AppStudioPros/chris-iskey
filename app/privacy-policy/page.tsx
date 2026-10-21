@@ -1,0 +1,11 @@
+import {pageMetadata} from '@/lib/seo';
+import type {Metadata} from 'next';import Link from 'next/link';import {PageHero} from '@/components/PageHero';
+export const metadata:Metadata=pageMetadata('Privacy Notice','How this website processes contact form submissions and browsing data.','/privacy-policy');
+export default function Privacy(){return <><PageHero kicker="SITE INFORMATION" title="Privacy notice." description="What this website collects and how it is used."/>
+<section className="section"><div className="container legal-copy"><p><strong>Effective date:</strong> October 21, 2026.</p>
+<h2>When you contact us</h2><p>If you submit a message, this website collects your name, email address, optional phone number, contact topic, and any information you choose to provide in the message. It records the submission time and which page you used.</p>
+<h2>What we do with it</h2><p>We use your details to process and respond to your inquiry. The contact form is not a newsletter sign-up, and submitting a message does not subscribe you to marketing emails. We do not ask for payment or sensitive medical information through the form.</p>
+<h2>Service providers</h2><p>Supabase is used for database storage, Resend for transactional notifications, Cloudflare Turnstile for form abuse protection, and Vercel for website hosting and aggregate analytics. Security systems may process technical signals such as IP-related information. We use a one-way keyed hash rather than storing raw visitor IPs in our leads table.</p>
+<h2>Access, correction, and deletion</h2><p>Messages may be accessible to authorized website administrators who respond to inquiries. To ask about information you submitted, request a correction, or request deletion, use the <Link href="/contact" className="text-link">contact page</Link> and identify the email used to submit it. Some records may need to be retained when required by law.</p>
+<h2>Retention and third-party sites</h2><p>Messages are scheduled for deletion after 180 days by the website’s retention job, unless a different period is required by law or an owner-approved policy. Links to outside video platforms and archived resources have their own privacy practices.</p>
+</div></section></>}
