@@ -49,3 +49,16 @@
 .vp-main-logo img{height:64px;width:auto;object-fit:contain}
 @media(max-width:960px){.vp-main-logo img{height:52px}}
 @media(max-width:700px){.vp-main-logo img{height:44px}}
+
+/* Article layout */
+.article-layout{display:grid;grid-template-columns:1fr 280px;gap:60px;align-items:start;padding-top:60px}
+.article-main{}
+.article-thumb{margin-bottom:0;overflow:hidden}
+.article-embed-wrap{width:100%}
+.article-sidebar{display:flex;flex-direction:column;gap:0;position:sticky;top:24px}
+.sidebar-card{padding:18px 0;border-bottom:1px solid #d4d9e4}
+.sidebar-card:first-child{border-top:1px solid #d4d9e4}
+.sidebar-label{font-size:9px;letter-spacing:2px;font-weight:800;color:#7a2535;margin:0 0 4px}
+.sidebar-value{font-size:15px;font-family:Georgia,serif;color:#14213d;margin:0}
+.sidebar-thumb{margin-top:20px;overflow:hidden}
+@media(max-width:960px){.article-layout{grid-template-columns:1fr;gap:32px}.article-sidebar{position:static}.sidebar-thumb{display:none}}

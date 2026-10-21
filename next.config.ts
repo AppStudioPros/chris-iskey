@@ -21,7 +21,7 @@ const nextConfig:NextConfig={
       "style-src 'self' 'unsafe-inline' https://challenges.cloudflare.com",
       "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com",
       "connect-src 'self' https://challenges.cloudflare.com https://vitals.vercel-insights.com https://va.vercel-scripts.com",
-      "frame-src https://challenges.cloudflare.com",
+      "frame-src https://challenges.cloudflare.com https://rumble.com https://www.youtube.com https://www.brighteon.com",
       "form-action 'self'",
       "upgrade-insecure-requests"
     ].join('; ')},
