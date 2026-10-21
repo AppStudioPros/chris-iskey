@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight, Menu } from 'lucide-react';
-const links = [['Home','/'],['About','/about'],['His Work','/work'],['Media','/media'],['Articles','/blog'],['Resources','/resources'],['Contact','/contact']];
+const links = [['Home','/'],['About','/about'],['His Work','/work'],['Media','/media'],['Articles','/blog'],['Shop','/shop'],['Resources','/resources'],['Contact','/contact']];
 export function SiteHeader(){return <header className="site-header"><div className="container header-inner">
   <Link href="/" className="vp-main-logo" aria-label="Christopher Key home">
     <img src="/images/vaccine-police-logo.png" alt="Vaccine Police" height={64} />
