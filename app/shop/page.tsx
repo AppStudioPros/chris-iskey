@@ -192,7 +192,7 @@ export default function Shop(){
             <p style={{color:'#9aaac8',lineHeight:'1.85',maxWidth:'440px',marginBottom:'32px'}}>
               Donate to the Vaccine Police and receive MasterpeAce Pain &amp; Energy Chips — on the house. Every dollar keeps the fight going.
             </p>
-            <a href="https://www.christiskey.life/donations-pain-energy" target="_blank" rel="noopener noreferrer"
+            <a href="/donations-pain-energy"
               style={{display:'inline-flex',alignItems:'center',gap:'14px',background:'#8b2c3e',color:'#fff',padding:'16px 24px',fontWeight:800,fontSize:'11px',letterSpacing:'1.5px'}}>
               <Heart size={16}/> DONATE &amp; CLAIM YOUR CHIPS <ArrowUpRight size={15}/>
             </a>

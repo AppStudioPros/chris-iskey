@@ -88,3 +88,28 @@
 .chips-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 @media(max-width:960px){.shop-grid{grid-template-columns:repeat(2,1fr)}.shop-card-wide{grid-template-columns:1fr}.shop-wide-img{height:260px}.chips-layout{grid-template-columns:1fr}}
 @media(max-width:700px){.shop-grid{grid-template-columns:1fr}.shop-wide-img{height:200px}.shop-wide-body{padding:28px}}
+
+/* Donate page */
+.donate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.donate-card{background:#fff;border:1px solid #d4d9e4;padding:32px;position:relative;display:flex;flex-direction:column}
+.donate-featured{border-color:#8b2c3e;box-shadow:0 0 0 1px #8b2c3e}
+.donate-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#8b2c3e;color:#fff;font-size:9px;letter-spacing:2px;font-weight:800;padding:4px 14px;white-space:nowrap}
+.donate-icon{color:#8b2c3e;margin-bottom:16px}
+.donate-name{font-family:Georgia,serif;font-size:26px;letter-spacing:-.5px;margin:0 0 6px}
+.donate-qty{font-size:10px;letter-spacing:1.8px;font-weight:800;color:#7a2535;margin:0 0 14px}
+.donate-desc{font-size:13px;line-height:1.8;color:#576070;margin:0 0 24px;flex:1}
+.donate-options{display:flex;flex-direction:column;gap:10px}
+.donate-btn{display:flex;align-items:center;justify-content:center;padding:14px;font-size:11px;font-weight:800;letter-spacing:1px;background:#14213d;color:#fff;text-decoration:none;transition:background .2s;text-align:center}
+.donate-btn:hover{background:#0f1c35}
+.donate-btn-featured{background:#8b2c3e}
+.donate-btn-featured:hover{background:#7a2535}
+.donate-btn-outline{background:transparent;border:1px solid #d4d9e4;color:#14213d}
+.donate-btn-outline:hover{background:#f0f2f8}
+
+/* Shop mobile fixes */
+@media(max-width:700px){
+  .shop-img-wrap{height:180px}
+  .shop-wide-body{padding:24px}
+  .shop-card-wide{grid-template-columns:1fr}
+  .donate-grid{grid-template-columns:1fr}
+}
