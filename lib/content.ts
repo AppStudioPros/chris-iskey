@@ -1,7 +1,7 @@
 export const site={
   name:'Christopher Key',url:'https://christiskey.life',
   phone:'561-329-8434',email:'vaccinepolice@protonmail.com',
-  portrait:'/images/chris-editorial.png',
+  portrait:'/images/chris-candid.png',
   ogImage:'/images/chris-og.png',
 };
 export type ArchivedPost={
