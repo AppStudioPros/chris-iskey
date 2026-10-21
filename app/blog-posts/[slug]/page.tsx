@@ -40,7 +40,7 @@ export default async function Article({params}:{params:Promise<{slug:string}>}){
       </div>
     </section>
 
-    <section className="section" style={{paddingTop:'0'}}>
+    <section className="section" style={{paddingTop:'48px'}}>
       <div className="container">
         <div className="article-layout">
 

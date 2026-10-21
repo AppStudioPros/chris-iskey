@@ -62,3 +62,8 @@
 .sidebar-value{font-size:15px;font-family:Georgia,serif;color:#14213d;margin:0}
 .sidebar-thumb{margin-top:20px;overflow:hidden}
 @media(max-width:960px){.article-layout{grid-template-columns:1fr;gap:32px}.article-sidebar{position:static}.sidebar-thumb{display:none}}
+
+/* Article hero — less bottom padding */
+.article-hero{padding-bottom:48px!important}
+/* Article layout padding fix */
+.article-layout{padding-top:0!important}
