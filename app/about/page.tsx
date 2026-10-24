@@ -1,6 +1,6 @@
 import {pageMetadata} from '@/lib/seo';
 import type {Metadata} from 'next';import Link from 'next/link';import {ArrowUpRight} from 'lucide-react';import {PageHero} from '@/components/PageHero';import {site} from '@/lib/content';
-export const metadata:Metadata=pageMetadata('About','Read Christopher Key's background in fitness, health and wellness businesses, and public advocacy.','/about');
+export const metadata:Metadata=pageMetadata('About','Read Christopher Key\u2019s background in fitness, health and wellness businesses, and public advocacy.','/about');
 
 const ventures=[
   {num:'01',name:'Steel City Fitness',role:'Fitness & wellness',desc:'Christopher\u2019s published biography describes ownership of Steel City Fitness, a health club specializing in health and wellness.'},
