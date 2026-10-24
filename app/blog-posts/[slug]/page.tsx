@@ -33,10 +33,10 @@ export default async function Article({params}:{params:Promise<{slug:string}>}){
     {/* Hero */}
     <section className="page-hero article-hero" style={{paddingBottom:'32px'}}>
       <div className="container">
-        <Link href="/blog" className="back-link"><ArrowLeft size={18}/> BACK TO ARTICLES</Link>
-        <div className="eyebrow"><span className="eyebrow-line"/> ARCHIVE / {dateLabel(p.date).toUpperCase()}</div>
+        <Link href="/blog" className="back-link"><ArrowLeft size={18}/> BACK TO BLOG</Link>
+        <div className="eyebrow"><span className="eyebrow-line"/> {p.label.toUpperCase()} / {dateLabel(p.date).toUpperCase()}</div>
         <h1>{p.title}</h1>
-        <p>Originally published {dateLabel(p.date)}. Preserved from Christopher Key's archive.</p>
+        <p>Published {dateLabel(p.date)}.</p>
       </div>
     </section>
 
@@ -84,16 +84,9 @@ export default async function Article({params}:{params:Promise<{slug:string}>}){
             <div style={{marginTop:'36px'}}>
               <div className="section-index" style={{marginBottom:'16px'}}>
                 <span>{isVideo ? <Film size={20}/> : <FileText size={20}/>}</span>
-                <span>{isVideo ? 'RECORDED APPEARANCE' : 'ARCHIVE ENTRY'}</span>
+                <span>{isVideo ? 'RECORDED APPEARANCE' : 'ARTICLE'}</span>
               </div>
               <p style={{fontSize:'18px',lineHeight:'1.85',color:'#576070',marginBottom:'16px'}}>{p.summary}</p>
-              {p.archiveNote && <p className="editorial-note">{p.archiveNote}</p>}
-            </div>
-
-            {/* Context callout */}
-            <div className="archive-callout" style={{marginTop:'36px'}}>
-              <b>HISTORICAL CONTEXT</b>
-              <p>Title and original date are retained as a record of the publication. The statements and subject matter reflect the original source and are not independently verified claims or current professional advice.</p>
             </div>
           </div>
 

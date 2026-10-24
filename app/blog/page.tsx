@@ -26,19 +26,14 @@ export default function Blog() {
     <>
       <section className="page-hero">
         <div className="container">
-          <div className="hero-kicker">04 / THE ARCHIVE</div>
-          <h1>Blog &amp; Media Archive.</h1>
-          <p>Articles, interviews, and recorded appearances from Christopher Key's archive.</p>
+          <div className="hero-kicker">04 / BLOG & MEDIA</div>
+          <h1>Blog &amp; Media.</h1>
+          <p>Articles, interviews, and recorded appearances from Christopher Key.</p>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="archive-callout">
-            <b>ARCHIVE NOTE</b>
-            <p>These are historical publications and titles from the old website. They do not indicate current events or independently verified medical or political claims.</p>
-          </div>
-
           {/* Filter pills */}
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '2rem 0' }}>
             {filters.map(f => (

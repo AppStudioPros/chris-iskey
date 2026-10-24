@@ -66,7 +66,7 @@ export default function Resources(){return <>
           <h2 style={{fontFamily:'Georgia,serif',fontSize:'clamp(36px,4vw,54px)',letterSpacing:'-2px',marginTop:'12px'}}>Key<em style={{color:'#a18756'}}> documents.</em></h2>
         </div>
       </div>
-      <div className="archive-callout"><b>ARCHIVE NOTICE</b><p>These documents are preserved from the original site for reference. Links and claims reflect their original context and should be independently reviewed.</p></div>
+      
       <div className="resource-grid">
         {documents.map(([title,label,url],i)=>(
           <a className="resource-card" key={title} href={url} target="_blank" rel="noopener noreferrer">
