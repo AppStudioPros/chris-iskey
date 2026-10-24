@@ -89,7 +89,7 @@ const devices = [
 export default function Shop(){
   return <>
     {/* Hero */}
-    <section style={{background:'#14213d',padding:'90px 0 72px'}}>
+    <section style={{background:'#14213d',height:'380px',display:'flex',alignItems:'center'}}>
       <div className="container">
         <div className="section-index light"><span>01</span><span>CHRISTOPHER'S RECOMMENDATIONS</span></div>
         <h1 style={{fontFamily:'Georgia,serif',fontSize:'clamp(48px,6vw,82px)',letterSpacing:'-3px',lineHeight:1,color:'#f0ede4',margin:'16px 0 22px'}}>
