@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { posts, dateLabel } from '@/lib/content';
 import { useState } from 'react';
+import { PageHero } from '@/components/PageHero';
 
 type Filter = 'All' | 'Videos' | 'Interviews' | 'Advocacy' | 'Archive';
 
@@ -24,13 +25,11 @@ export default function Blog() {
 
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <div className="hero-kicker">BLOG & MEDIA</div>
-          <h1>Blog &amp; Media.</h1>
-          <p>Articles, interviews, and recorded appearances from Christopher Key.</p>
-        </div>
-      </section>
+      <PageHero
+        kicker="BLOG & MEDIA"
+        title="Blog & Media."
+        description="Articles, interviews, and recorded appearances from Christopher Key."
+      />
 
       <section className="section">
         <div className="container">

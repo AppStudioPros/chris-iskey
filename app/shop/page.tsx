@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {ArrowUpRight, Heart} from 'lucide-react';
 import {pageMetadata} from '@/lib/seo';
+import {PageHero} from '@/components/PageHero';
 
 export const metadata:Metadata=pageMetadata(
   'Shop — Christopher\'s Recommendations',
@@ -89,17 +90,12 @@ const devices = [
 export default function Shop(){
   return <>
     {/* Hero */}
-    <section style={{background:'#14213d',height:'380px',display:'flex',alignItems:'center'}}>
-      <div className="container">
-        <div className="section-index light"><span>01</span><span>CHRISTOPHER'S RECOMMENDATIONS</span></div>
-        <h1 style={{fontFamily:'Georgia,serif',fontSize:'clamp(48px,6vw,82px)',letterSpacing:'-3px',lineHeight:1,color:'#f0ede4',margin:'16px 0 22px'}}>
-          Products he<br/><em style={{color:'#8b2c3e'}}>stands behind.</em>
-        </h1>
-        <p style={{color:'#9aaac8',fontSize:'17px',lineHeight:'1.85',maxWidth:'560px'}}>
-          These are products Christopher personally uses and recommends. Every affiliate purchase helps fund the Vaccine Police mission.
-        </p>
-      </div>
-    </section>
+    <PageHero
+      dark
+      kicker="CHRISTOPHER'S RECOMMENDATIONS"
+      title="Products he stands behind."
+      description="Products Christopher personally uses and recommends. Every affiliate purchase helps fund the Vaccine Police mission."
+    />
 
     {/* Supplements */}
     <section className="section" style={{background:'#f5f6f9'}}>
