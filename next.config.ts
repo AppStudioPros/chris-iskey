@@ -4,6 +4,9 @@ const nextConfig:NextConfig={
   async redirects(){return [
     {source:'/documentaries',destination:'/media',permanent:true},
     {source:'/documents',destination:'/resources',permanent:true},
+    {source:'/work',destination:'/about',permanent:true},
+    {source:'/media',destination:'/blog',permanent:true},
+    {source:'/book',destination:'/contact',permanent:true},
   ];},
   async headers(){return [{source:'/:path*',headers:[
     {key:'X-Content-Type-Options',value:'nosniff'},
