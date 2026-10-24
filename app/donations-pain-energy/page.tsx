@@ -93,7 +93,7 @@ export default function Donate() {
             To complete your donation, reach out directly at{' '}
             <a href="mailto:vaccinepolice@protonmail.com" style={{color:'#8b2c3e',fontWeight:700}}>vaccinepolice@protonmail.com</a>
             {' '}or call <a href="tel:5613298434" style={{color:'#8b2c3e',fontWeight:700}}>561-329-8434</a>.
-            Chips are shipped after donation is confirmed. Payment setup via Stripe/GiveSendGo coming soon.
+            Chips are shipped after your donation is received.
           </p>
         </div>
       </div>

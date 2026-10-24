@@ -43,7 +43,7 @@ export function ContactForm({defaultTopic='General question'}:{defaultTopic?:'Ge
     <label>YOUR MESSAGE <textarea name="message" rows={5} maxLength={5000} placeholder="Tell us a little about why you're reaching out."/></label>
     <label className="privacy-check"><input type="checkbox" name="privacy" required/> <span>I agree to the use of my information to respond to this message. Read the <Link href="/privacy-policy">privacy notice</Link>.</span></label>
     <div className="website-trap" aria-hidden="true"><label>Leave blank <input name="website" tabIndex={-1} autoComplete="off"/></label></div>
-    {siteKey ? <><Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive"/><div className="cf-turnstile" data-sitekey={siteKey} data-theme="light" data-response-field="true"/></> : <p className="form-status">The form opens when the website's security keys are configured. Contact details are listed on this page.</p>}
+    {siteKey && <><Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive"/><div className="cf-turnstile" data-sitekey={siteKey} data-theme="light" data-response-field="true"/></>}
     <button className="button button-dark" type="submit" disabled={!siteKey||sending}>{sending?'SENDING...':'SEND YOUR MESSAGE'} <ArrowUpRight size={17}/></button>
     <p role="status" aria-live="polite" className="form-status">{status}</p>
   </form>;
