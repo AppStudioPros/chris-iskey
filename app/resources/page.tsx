@@ -26,7 +26,7 @@ const topics=[
 ];
 
 export default function Resources(){return <>
-  <PageHero kicker="05 / RESOURCES" title="Outsmart the news." description="A library of topics, documents, and references Christopher has covered over the years. Do your own research — these are starting points, not conclusions."/>
+  <PageHero kicker="RESOURCES" title="Outsmart the news." description="A library of topics, documents, and references Christopher has covered over the years. Do your own research — these are starting points, not conclusions."/>
 
   {/* Outsmart section */}
   <section className="section" style={{background:'#1d2722'}}>

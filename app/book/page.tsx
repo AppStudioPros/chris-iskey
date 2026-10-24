@@ -9,7 +9,7 @@ export default function Book(){
   const provided=process.env.NEXT_PUBLIC_BOOKING_URL;
   const bookingUrl=provided?.startsWith('https://')?provided:undefined;
   return <>
-    <PageHero kicker="07 / CONNECT" title="Request a time." description="Share what you’d like to discuss. If Christopher has provided a scheduling link, you can use it directly."/>
+    <PageHero kicker="CONNECT" title="Request a time." description="Share what you’d like to discuss. If Christopher has provided a scheduling link, you can use it directly."/>
     <section className="section"><div className="container booking-layout">
       <div className="booking-intro"><CalendarDays size={38}/><h2>Let’s find a time.</h2><p>Have an interview, event, or other request? Send the details using this form. A request does not confirm an appointment.</p>
       {bookingUrl && <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="button button-dark">OPEN BOOKING CALENDAR <ArrowUpRight size={17}/></a>}

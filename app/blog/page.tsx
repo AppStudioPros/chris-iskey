@@ -26,7 +26,7 @@ export default function Blog() {
     <>
       <section className="page-hero">
         <div className="container">
-          <div className="hero-kicker">04 / BLOG & MEDIA</div>
+          <div className="hero-kicker">BLOG & MEDIA</div>
           <h1>Blog &amp; Media.</h1>
           <p>Articles, interviews, and recorded appearances from Christopher Key.</p>
         </div>
