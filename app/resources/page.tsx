@@ -1,17 +1,11 @@
 import {pageMetadata} from '@/lib/seo';
 import type {Metadata} from 'next';
-import {ArrowUpRight, FileText, BookOpen, ExternalLink} from 'lucide-react';
+import {ArrowUpRight} from 'lucide-react';
+import {DocumentTabs} from '@/components/DocumentTabs';
 import {PageHero} from '@/components/PageHero';
 export const metadata:Metadata=pageMetadata('Resources','A library of documents, references, and topics Christopher has covered — from vaccine policy to food and environment.', '/resources');
 
-const documents=[
-  ['The Ruby Affidavit','Historic external link','https://vaccine-police.com/'],
-  ['David Martin Document','Historical document','https://cdn.prod.website-files.com/62f6c2ce87ee5b46474b4cf5/62f75221d95bf7724d4a6132_The-Criminal-Conspiracy-of-Coronavirus.pdf'],
-  ['Doctor\'s Letter','Archived letter','https://cdn.prod.website-files.com/62f6c2ce87ee5b46474b4cf5/62f75252fd7b9937e0360a3a_doctors-letter.pdf'],
-  ['Nuremberg Papers','Historical document','https://cdn.prod.website-files.com/62f6c2ce87ee5b46474b4cf5/62f752711f5ebf66a12ba42f_nuremberg.pdf'],
-  ['The Vaccine Waiver','Archived document','https://cdn.prod.website-files.com/62f6c2ce87ee5b46474b4cf5/62f7547b992cf445dccc612b_vaccine-waiver.pdf'],
-  ['Phone Script for CEOs & Superintendents','Archived document','https://cdn.prod.website-files.com/62f6c2ce87ee5b46474b4cf5/62f7547d39fad206d88696f1_Scripts.pdf'],
-];
+
 
 const topics=[
   {title:'GMO',icon:'/images/topic-gmo.png',desc:'Protecting you and the world from GMOs — and Roundup. Read more about responsible technology.',url:'https://www.responsibletechnology.org/'},
@@ -63,20 +57,10 @@ export default function Resources(){return <>
       <div className="section-head" style={{marginBottom:'32px'}}>
         <div>
           <div className="section-index"><span>02</span><span>DOCUMENTS</span></div>
-          <h2 style={{fontFamily:'Georgia,serif',fontSize:'clamp(36px,4vw,54px)',letterSpacing:'-2px',marginTop:'12px'}}>Key<em style={{color:'#a18756'}}> documents.</em></h2>
+          <h2 style={{fontFamily:'Georgia,serif',fontSize:'clamp(36px,4vw,54px)',letterSpacing:'-2px',marginTop:'12px'}}>The documents<em style={{color:'#a18756'}}> you need.</em></h2>
         </div>
       </div>
-      
-      <div className="resource-grid">
-        {documents.map(([title,label,url],i)=>(
-          <a className="resource-card" key={title} href={url} target="_blank" rel="noopener noreferrer">
-            <span className="resource-icon">{i%2?<BookOpen size={23}/>:<FileText size={23}/>}</span>
-            <span className="small-label">{label}</span>
-            <h3>{title}</h3>
-            <span className="resource-open">VIEW DOCUMENT <ExternalLink size={15}/></span>
-          </a>
-        ))}
-      </div>
+      <DocumentTabs />
     </div>
   </section>
 </>}
