@@ -9,7 +9,7 @@ const topics: Topic[] = [
   { title: 'Vaccines', icon: '/images/topic-vaccines.png', desc: 'Mary Tocco has spent decades in natural health care advocating for informed consent on childhood shots.', url: 'https://marytocco.com/' },
   { title: 'Glyphosate', icon: '/images/topic-glyphosate.png', desc: 'We built an entire economy around healthcare and it\'s failing us. Dr. Bush on chemical farming and human health.', url: 'https://zachbushmd.com/' },
   { title: 'Circumcision', icon: '/images/topic-circumcision.png', desc: 'American Circumcision — a documentary exploring the debate around the most common surgery performed on American males.', videoId: 'JpQDkKF2pyU' },
-  { title: 'Hospital Births', icon: '/images/topic-hospital-births.png', desc: '"The Business of Being Born" — a documentary asking whether the U.S. maternity care system is working.', url: 'https://www.thebusinessofbeingborn.com/' },
+  { title: 'Hospital Births', icon: '/images/topic-hospital-births.png', desc: '"The Business of Being Born" — a documentary asking whether the U.S. maternity care system is working.', videoId: 'W6V_mQmFZps' },
   { title: 'Fluoride', icon: '/images/topic-fluoride.png', desc: 'Remove fluoride from tap water. Watch the film and learn what\'s actually in the water supply.', url: 'https://fluoridealert.org/' },
   { title: 'Aspartame', icon: '/images/topic-aspartame.png', desc: 'The Dangers of Aspartame — a closer look at what\'s in diet drinks and processed foods.', url: 'https://www.youtube.com/watch?v=_HNhrFV5Gvo' },
   { title: 'Anti-5G', icon: '/images/topic-5g.png', desc: 'Observe the reported effects of 5G radiation. Christopher has covered this topic extensively.', url: 'https://www.saferemr.com/' },
