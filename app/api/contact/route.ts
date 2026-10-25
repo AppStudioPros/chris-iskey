@@ -3,9 +3,8 @@ import { Resend } from 'resend';
 
 export const runtime = 'nodejs';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { name, email, phone, topic, message } = await req.json() as {
       name?: string; email?: string; phone?: string; topic?: string; message?: string;
