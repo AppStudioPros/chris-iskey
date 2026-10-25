@@ -43,10 +43,13 @@ export function SiteFooter() {
             <div className="footer-kicker">THE PERSONAL WEBSITE OF</div>
             <Link href="/" className="footer-brand">Christopher Key<span>.</span></Link>
             <p>A closer look at the person, the background, and the work.</p>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '20px' }}>
               {socials.map(s => (
-                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="footer-social-icon">
-                  {s.icon}
+                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
+                  style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#9aaac8', textDecoration: 'none', transition: 'color .2s' }}
+                  className="footer-social-link"
+                >
+                  Find us on {s.label} →
                 </a>
               ))}
             </div>
