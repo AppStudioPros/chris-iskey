@@ -10,7 +10,7 @@ export const metadata:Metadata=pageMetadata('Resources','A library of documents,
 const topics=[
   {title:'GMO',icon:'/images/topic-gmo.png',desc:'Protecting you and the world from GMOs — and Roundup. Read more about responsible technology.',url:'https://www.responsibletechnology.org/'},
   {title:'Vaccines',icon:'/images/topic-vaccines.png',desc:'Mary Tocco has spent decades in natural health care advocating for informed consent on childhood shots.',url:'https://marytocco.com/'},
-  {title:'Glyphosate',icon:'/images/topic-glyphosate.png',desc:'We built an entire economy around healthcare and it\'s failing us. Dr. Bush on chemical farming and human health.',url:'https://zacbushmd.com/'},
+  {title:'Glyphosate',icon:'/images/topic-glyphosate.png',desc:'We built an entire economy around healthcare and it\'s failing us. Dr. Bush on chemical farming and human health.',url:'https://zachbushmd.com/'},
   {title:'Circumcision',icon:'/images/topic-circumcision.png',desc:'American Circumcision — a documentary exploring the debate around the most common surgery performed on American males.',url:'https://www.amazon.com/dp/B07MQDMHRD'},
   {title:'Hospital Births',icon:'/images/topic-hospital-births.png',desc:'"The Business of Being Born" — a documentary asking whether the U.S. maternity care system is working.',url:'https://www.thebusinessofbeingborn.com/'},
   {title:'Fluoride',icon:'/images/topic-fluoride.png',desc:'Remove fluoride from tap water. Watch the film and learn what\'s actually in the water supply.',url:'https://fluoridealert.org/'},
@@ -20,7 +20,7 @@ const topics=[
 ];
 
 export default function Resources(){return <>
-  <PageHero kicker="RESOURCES" title="Outsmart the news." description="A library of topics, documents, and references Christopher has covered over the years. Do your own research — these are starting points, not conclusions."/>
+  <PageHero kicker="RESOURCES" title="Know what they don't want you to know." description="Documents, research links, and reference materials — everything Christopher has gathered to help you think for yourself."/>
 
   {/* Outsmart section */}
   <section className="section" style={{background:'#1d2722'}}>
