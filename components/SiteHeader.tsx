@@ -6,6 +6,7 @@ export function SiteHeader(){return <header className="site-header"><div classNa
     <img src="/images/vaccine-police-logo.png" alt="Vaccine Police" height={64} />
   </Link>
   <nav className="desktop-nav" aria-label="Main navigation">{links.map(([n,u])=><Link href={u} key={u}>{n}</Link>)}</nav>
+  <a href="https://masterpeacebyhcs.com/christiskey" target="_blank" rel="noopener noreferrer" className="header-cta" style={{background:'transparent',border:'2px solid currentColor'}}>MASTERPEACE</a>
   <Link href="/donate" className="header-cta">DONATE <Heart size={16}/></Link>
   <details className="mobile-menu"><summary aria-label="Toggle menu"><Menu size={25}/></summary><nav aria-label="Mobile navigation">{links.map(([n,u])=><Link href={u} key={u}>{n}</Link>)}<Link href="/donate">Donate</Link></nav></details>
 </div></header>}
