@@ -7,7 +7,7 @@ const socials = [
     label: 'Brighteon',
     url: 'https://www.brighteon.com/channels/vaccinepolice/home',
     icon: (
-      <img src="/images/brighteon-logo.png" alt="Brighteon" width={36} height={36} style={{objectFit:'contain'}}/>
+      <img src="/images/brighteon-logo.png" alt="Brighteon" width={40} height={40} style={{objectFit:'contain'}}/>
     ),
   },
   {
