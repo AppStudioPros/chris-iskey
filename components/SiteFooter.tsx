@@ -7,12 +7,7 @@ const socials = [
     label: 'Brighteon',
     url: 'https://www.brighteon.com/channels/vaccinepolice/home',
     icon: (
-      /* Brighteon brand icon — red rounded square with their lightning-B mark */
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Brighteon">
-        <rect width="32" height="32" rx="7" fill="#E0203C"/>
-        <path d="M8 7h7.5c2.2 0 3.8.8 4.5 2.2.6 1.1.5 2.5-.2 3.5L8 24V7z" fill="white"/>
-        <path d="M13.5 15.5H18c1.8 0 3.2.8 3.8 2.1.6 1.2.4 2.6-.4 3.5-.9 1-2.2 1.4-4 1.4h-3.9v-7z" fill="white"/>
-      </svg>
+      <img src="/images/brighteon-logo.png" alt="Brighteon" width={32} height={32} style={{objectFit:'contain'}}/>
     ),
   },
   {
