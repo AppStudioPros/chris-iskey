@@ -89,6 +89,14 @@ const devices = [
 
 export default function Shop(){
   return <>
+    {/* Alert banner */}
+    <div style={{background:'#1a1a1a',borderBottom:'1px solid #333',padding:'10px 0',textAlign:'center'}}>
+      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'8px'}}>
+        <span style={{color:'#f5a623',fontSize:'15px'}}>⚠</span>
+        <p style={{margin:0,fontSize:'13px',color:'#ccc',letterSpacing:'0.02em'}}>We don&apos;t ship any products to the state of Alabama.</p>
+      </div>
+    </div>
+
     {/* Hero */}
     <PageHero
       dark
