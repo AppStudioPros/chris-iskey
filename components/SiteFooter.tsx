@@ -49,11 +49,7 @@ export function SiteFooter() {
             <p>A closer look at the person, the background, and the work.</p>
             <div style={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
               {socials.map(s => (
-                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-                  style={{ display: 'block', transition: 'opacity .2s', opacity: 0.9 }}
-                  onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
-                  onMouseLeave={e => (e.currentTarget.style.opacity = '0.9')}
-                >
+                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="footer-social-icon">
                   {s.icon}
                 </a>
               ))}
