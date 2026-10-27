@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function Donate() {
   return (
     <>
+      <Script src="https://donorbox.org/widget.js" strategy="lazyOnload" data-paypal-express="false" />
       <PageHero
         kicker="SUPPORT THE MISSION"
         title="Please consider donating."
