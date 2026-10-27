@@ -22,9 +22,9 @@ const nextConfig:NextConfig={
       "img-src 'self' https://cdn.prod.website-files.com data:",
       "font-src 'self' data:",
       "style-src 'self' 'unsafe-inline' https://challenges.cloudflare.com",
-      "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com",
-      "connect-src 'self' https://challenges.cloudflare.com https://vitals.vercel-insights.com https://va.vercel-scripts.com",
-      "frame-src https://challenges.cloudflare.com https://rumble.com https://www.youtube.com https://www.brighteon.com",
+      "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com https://donorbox.org https://js.stripe.com",
+      "connect-src 'self' https://challenges.cloudflare.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://donorbox.org https://api.stripe.com",
+      "frame-src https://challenges.cloudflare.com https://rumble.com https://www.youtube.com https://www.brighteon.com https://donorbox.org",
       "form-action 'self'",
       "upgrade-insecure-requests"
     ].join('; ')},
