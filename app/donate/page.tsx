@@ -3,9 +3,23 @@ import type { Metadata } from 'next';
 import { PageHero } from '@/components/PageHero';
 
 export const metadata: Metadata = {
-  title: 'Donate — Christopher Key',
-  description: 'Support Christopher Key\'s mission to hold the nation accountable, defend freedom, and protect children.',
+  title: 'Support Christopher Key — Donate',
+  description: 'Help Christopher Key continue the fight for freedom, accountability, and protecting children. Every contribution makes a difference.',
   alternates: { canonical: '/donate' },
+  openGraph: {
+    title: 'Support Christopher Key — Donate',
+    description: 'Help Christopher Key continue the fight for freedom, accountability, and protecting children.',
+    url: 'https://www.christiskey.life/donate',
+    siteName: 'Christopher Key',
+    images: [{ url: 'https://www.christiskey.life/images/chris-og.png', width: 1200, height: 630, alt: 'Support Christopher Key' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Support Christopher Key — Donate',
+    description: 'Help Christopher Key continue the fight for freedom, accountability, and protecting children.',
+    images: ['https://www.christiskey.life/images/chris-og.png'],
+  },
 };
 
 export default function Donate() {
