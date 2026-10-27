@@ -18,24 +18,14 @@ export default function Donate() {
         description="Help hold the nation accountable, defend freedom, and protect children around the world."
       />
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: '80px' }}>
         <div className="container">
 
-          {/* Two-column: video + donate box */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start', marginBottom: '48px' }}>
+          {/* Two-column: mission text + donate box */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center', marginBottom: '48px' }}>
 
-            {/* Left: Video + mission text */}
+            {/* Left: Mission text */}
             <div>
-              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '6px', background: '#111d35', marginBottom: '32px' }}>
-                <iframe
-                  src="https://rumble.com/embed/v1w9rpk/?pub=4"
-                  title="Christopher Key — Stew Peters Show"
-                  allowFullScreen
-                  allow="autoplay"
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                />
-              </div>
-
               <h2 style={{ fontFamily: 'var(--font-editorial, Georgia, serif)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', letterSpacing: '-0.04em', lineHeight: 1.15, marginBottom: '16px' }}>
                 Why Christopher is asking<br /> for <em>your support.</em>
               </h2>
