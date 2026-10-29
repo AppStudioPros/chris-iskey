@@ -113,3 +113,13 @@
   .shop-card-wide{grid-template-columns:1fr}
   .donate-grid{grid-template-columns:1fr}
 }
+
+/* Donate main layout — two-column mission+donorbox grid */
+@media(max-width:760px){
+  .donate-main-grid{grid-template-columns:1fr!important;gap:32px!important}
+  .donate-main-grid>div:last-child{position:static!important;top:auto!important}
+  .donate-main-grid iframe{height:750px!important;max-width:100%!important}
+}
+
+/* Chips mission section — reduce vertical padding on mobile */
+@media(max-width:700px){.chips-section{padding:60px 0!important}}

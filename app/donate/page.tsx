@@ -36,7 +36,7 @@ export default function Donate() {
         <div className="container">
 
           {/* Two-column: mission text + donate box */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center', marginBottom: '48px' }}>
+          <div className="donate-main-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center', marginBottom: '48px' }}>
 
             {/* Left: Mission text */}
             <div>
@@ -77,7 +77,18 @@ export default function Donate() {
       {/* Mobile styles */}
       <style>{`
         @media (max-width: 760px) {
-          .donate-grid { grid-template-columns: 1fr !important; }
+          .donate-main-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+          .donate-main-grid > div:last-child {
+            position: static !important;
+            top: auto !important;
+          }
+          .donate-main-grid iframe {
+            height: 750px !important;
+            max-width: 100% !important;
+          }
         }
       `}</style>
     </>

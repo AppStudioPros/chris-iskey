@@ -185,7 +185,7 @@ export default function Shop(){
     </section>
 
     {/* Pain & Energy Chips — Mission CTA */}
-    <section style={{background:'#14213d',padding:'90px 0'}}>
+    <section className="chips-section" style={{background:'#14213d',padding:'90px 0'}}>
       <div className="container">
         <div className="chips-layout">
           <div>
