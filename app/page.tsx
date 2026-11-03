@@ -1,8 +1,53 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, ArrowRight, MoveDown, Play, BookOpenText, CalendarDays, Heart, ShoppingBag, Zap, Mail } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, MoveDown, Play, BookOpenText, CalendarDays, Heart, ShoppingBag, Zap, Mail, CheckCircle } from 'lucide-react';
 import { site,posts,dateLabel } from '@/lib/content';
 
 import {ContactForm} from '@/components/ContactForm';
+
+function NewsletterForm() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'done'|'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({email}),
+      });
+      if (!res.ok) throw new Error();
+      setStatus('done');
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  if (status === 'done') return (
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'12px',padding:'24px 0'}}>
+      <CheckCircle size={36} color="#8b2c3e"/>
+      <p style={{fontFamily:'Georgia,serif',fontSize:'22px',color:'#14213d',margin:0}}>You&apos;re subscribed.</p>
+      <p style={{color:'#6b7280',fontSize:'14px',margin:0}}>Thank you — expect updates from Christopher soon.</p>
+    </div>
+  );
+
+  return (
+    <form onSubmit={handleSubmit} style={{display:'flex',gap:'10px',maxWidth:'480px',margin:'0 auto',flexWrap:'wrap',justifyContent:'center'}}>
+      <input
+        type="email" required value={email} onChange={e => setEmail(e.target.value)}
+        placeholder="Your email address"
+        style={{flex:'1',minWidth:'220px',padding:'13px 16px',border:'1.5px solid #d4d9e4',borderRadius:'3px',fontSize:'0.9rem',fontFamily:'inherit',outline:'none',color:'#14213d'}}
+      />
+      <button type="submit" disabled={status==='loading'} style={{padding:'13px 24px',background:'#8b2c3e',color:'#fff',border:'none',borderRadius:'3px',fontWeight:700,fontSize:'11px',letterSpacing:'1.5px',cursor:'pointer',opacity:status==='loading'?0.7:1,whiteSpace:'nowrap'}}>
+        {status==='loading' ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
+      </button>
+      {status==='error' && <p style={{width:'100%',color:'#8b2c3e',fontSize:'13px',textAlign:'center',margin:'4px 0 0'}}>Something went wrong. Please try again.</p>}
+    </form>
+  );
+}
 export default function Home(){return <>
 <section className="hero"><div className="container hero-grid"><div className="hero-copy"><div className="eyebrow"><span className="eyebrow-line"/> THE PERSON BEHIND THE HEADLINES</div><h1>Christopher<br/><em>Key.</em></h1><p className="hero-lead">A life shaped by business, health and wellness, and speaking out about the issues that matter to him.</p><p className="hero-sub">Get to know Christopher, explore his work, and find the interviews and writing behind his public story.</p><div className="button-row"><Link className="button button-dark" href="/about">GET TO KNOW CHRISTOPHER <ArrowUpRight size={17}/></Link><Link className="button button-outline" href="/about">EXPLORE HIS WORK <ArrowUpRight size={17}/></Link></div></div><div className="hero-portrait"><div className="portrait-frame"><div className="portrait-fallback"><span>CK</span></div><img src={site.portrait} alt="Christopher Key"/></div></div></div></section>
 <div className="chapter-band"><div className="container" style={{justifyContent:'center'}}><a href="https://www.brighteon.com/channels/vaccinepolice/home" target="_blank" rel="noopener noreferrer" className="band-social-link">WATCH ON BRIGHTEON</a><span className="band-divider"/><a href="https://rumble.com/user/VaccinePolice" target="_blank" rel="noopener noreferrer" className="band-social-link">WATCH ON RUMBLE</a><span className="band-divider"/><a href="https://t.me/vaccinepolice" target="_blank" rel="noopener noreferrer" className="band-social-link">JOIN ON TELEGRAM</a></div></div>
@@ -63,7 +108,7 @@ export default function Home(){return <>
     <p style={{fontSize:'10px',letterSpacing:'2.5px',fontWeight:700,color:'#8b2c3e',marginBottom:'12px'}}>STAY CONNECTED</p>
     <h2 style={{fontFamily:'Georgia,serif',fontSize:'clamp(28px,4vw,42px)',letterSpacing:'-1px',marginBottom:'16px',lineHeight:1.1}}>Subscribe to the Newsletter</h2>
     <p style={{color:'#6b7280',lineHeight:'1.8',marginBottom:'32px',fontSize:'0.95rem'}}>Get Christopher&apos;s latest updates, health insights, and advocacy work delivered directly to your inbox.</p>
-    <div className="klaviyo-form-WYvyfV"/>
+    <NewsletterForm/>
   </div>
 </section>
 <section id="story" className="section story-section"><div className="container story-grid"><div><div className="section-index"><span>01</span><span>THE PERSON</span></div><h2>There's more<br/>to <em>the story.</em></h2></div><div className="story-body"><span className="gold-rule"/><p className="large-text">Christopher's path has taken him from the world of fitness and wellness businesses to a very public role in advocacy and media.</p><p>Christopher owned Steel City Fitness, co-owned SWATS, and founded Health Management Systems. His interviews and writing document his views on public policy and health issues.</p><p>This site brings those chapters together in one place, with room for the work and interests that come next.</p><Link href="/about" className="text-link">READ CHRISTOPHER'S BIOGRAPHY <ArrowUpRight size={18}/></Link></div></div></section>
