@@ -123,3 +123,9 @@
 
 /* Chips mission section — reduce vertical padding on mobile */
 @media(max-width:700px){.chips-section{padding:60px 0!important}}
+
+/* Featured CTA section — home page */
+.cta-action-card:hover{background:rgba(255,255,255,0.09)!important}
+@media(max-width:760px){
+  .cta-action-grid{grid-template-columns:1fr!important}
+}
