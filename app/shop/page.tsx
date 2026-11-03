@@ -175,7 +175,7 @@ export default function Shop(){
         </h2>
         <a href="https://www.freedomlawschool.org/en-us/affiliate?code=vaccinepolice" target="_blank" rel="noopener noreferrer" className="shop-card-wide">
           <div className="shop-wide-img">
-            <img src="/images/shop/freedom-law-site.png" alt="Freedom Law School" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+            <img src="/images/shop/freedom-law.jpg" alt="Freedom Law School" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
           </div>
           <div className="shop-wide-body">
             <p className="shop-brand">Freedom Law School</p>
