@@ -29,7 +29,7 @@ const supplements = [
     name: 'Mega SporeBiotic',
     brand: 'Microbiome Labs',
     desc: 'An all-spore, broad-spectrum probiotic clinically shown to recondition the gut. Christopher partnered with Microbiome Labs to bring this to the Vaccine Police community.',
-    image: '/images/shop/microbiome-labs.png',
+    image: '/images/shop/rnc-seeds-site.png',
     url: 'https://microbiomelabs.com/en-US/vaccine-police-trust',
   },
   {
@@ -43,8 +43,15 @@ const supplements = [
     name: 'Bitter Raw Apricot Seeds',
     brand: 'RNC Store',
     desc: 'Fresh bitter apricot seeds and apricot seed meal — natural, non-GMO, and straight from the source. A longtime staple in the natural health community.',
-    image: '/images/shop/rnc-seeds-site.png',
+    image: '/images/shop/b3-bands-site.png',
     url: 'https://rncstore.com/?utm_source=simple-affiliate&utm_medium=referral&utm_campaign=Jennifer+%285274143522876%29&sacode=tdeanq',
+  },
+  {
+    name: "Nesa's Hemp",
+    brand: "Nesa's Hemp",
+    desc: "The world's first living CBDa hemp extract. Never dried, never heated — cold pressed to preserve CBDa and the full spectrum of compounds naturally found in the plant. USDA certified organic.",
+    image: '/images/shop/nesas-hemp.png',
+    url: 'https://www.nesashemp.com/#key',
   },
 ];
 
@@ -53,7 +60,7 @@ const devices = [
     name: 'KLOUD + BUBBLE — NextGen Combo',
     brand: 'Centropix',
     desc: 'PEMF therapy mat and gold pendant — frequency-based regeneration technology. The NextGen Combo includes both the KLOUD mat and the BUBBLE wearable. High-end investment in your health.',
-    image: '/images/shop/centropix.png',
+    image: '/images/shop/microbiome-labs.png',
     url: 'https://www.centropix.us/christiskey/en',
     tag: 'PREMIUM',
   },
@@ -68,7 +75,7 @@ const devices = [
     name: 'Water & Air Purification',
     brand: 'H2O Air Water Americas',
     desc: 'Whole-home water and air purification systems. Clean water, clean air — two of the fundamentals Christopher speaks about in his health advocacy.',
-    image: '/images/shop/h2o-water.png',
+    image: '/images/shop/h2o-air-water.png',
     url: 'https://www.h2oairwateramericas.com/?affid=vaccine-police',
   },
   {
@@ -82,7 +89,7 @@ const devices = [
     name: 'B3 Blood Flow Restriction Bands',
     brand: 'B3 Sciences',
     desc: 'Revolutionary workout bands that use blood flow restriction to produce the same hormonal and cardiovascular benefits as intense exercise — in far less time.',
-    image: '/images/shop/b3-bands-site.png',
+    image: '/images/shop/b3-bands.png',
     url: 'https://keys2life.b3sciences.com/',
   },
 ];
