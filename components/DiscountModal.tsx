@@ -1,13 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { X, ArrowUpRight, Tag } from 'lucide-react';
+import { X, ArrowUpRight, Zap, Eye, Globe } from 'lucide-react';
 
 export function DiscountModal() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (document.cookie.includes('ck_discount_dismissed=1')) return;
-    // Show 25 seconds after page load — well after the first modal
     const t = setTimeout(() => setVisible(true), 25000);
     return () => clearTimeout(t);
   }, []);
@@ -22,80 +21,97 @@ export function DiscountModal() {
   return (
     <>
       {/* Overlay */}
-      <div
-        onClick={dismiss}
-        style={{
-          position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.65)',
-          zIndex: 999, backdropFilter: 'blur(4px)',
-        }}
-      />
+      <div onClick={dismiss} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 999, backdropFilter: 'blur(4px)' }} />
 
       {/* Modal */}
       <div style={{
         position: 'fixed', top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: 1000, width: '90%', maxWidth: '460px',
-        background: '#fff',
-        borderRadius: '6px',
-        overflow: 'hidden',
-        boxShadow: '0 32px 100px rgba(0,0,0,0.5)',
+        zIndex: 1000, width: '92%', maxWidth: '520px',
+        background: '#0f172a',
+        borderRadius: '8px', overflow: 'hidden',
+        boxShadow: '0 32px 100px rgba(0,0,0,0.7)',
+        border: '1px solid rgba(255,255,255,0.08)',
       }}>
-        {/* Top accent bar */}
-        <div style={{ background: '#8b2c3e', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Tag size={16} color="#fff" />
-          <span style={{ color: '#fff', fontSize: '11px', fontWeight: 700, letterSpacing: '2px' }}>EXCLUSIVE OFFER FOR CHRISTOPHER'S COMMUNITY</span>
-        </div>
 
-        <div style={{ padding: '36px 36px 32px', position: 'relative' }}>
-          {/* Close */}
-          <button
-            onClick={dismiss}
-            style={{
-              position: 'absolute', top: '14px', right: '14px',
-              background: 'rgba(0,0,0,0.06)', border: 'none', cursor: 'pointer',
-              color: '#6b7280', padding: '5px', borderRadius: '50%',
-              display: 'flex', alignItems: 'center',
-            }}
-            aria-label="Close"
-          >
+        {/* Header bar */}
+        <div style={{ background: '#8b2c3e', padding: '10px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '10px', fontWeight: 700, letterSpacing: '2px' }}>
+            EXCLUSIVE OFFER FOR CHRISTOPHER'S COMMUNITY
+          </span>
+          <button onClick={dismiss} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.6)', display: 'flex', padding: 0 }} aria-label="Close">
             <X size={15} />
           </button>
+        </div>
 
-          <p style={{ fontSize: '52px', fontWeight: 900, color: '#8b2c3e', margin: '0 0 4px', lineHeight: 1 }}>25%</p>
-          <p style={{ fontSize: '11px', letterSpacing: '2px', fontWeight: 700, color: '#8b2c3e', margin: '0 0 16px' }}>OFF YOUR NEW WEBSITE</p>
+        <div style={{ padding: '32px 32px 28px' }}>
 
-          <h2 style={{
-            fontFamily: 'Georgia, serif', fontSize: '26px', color: '#14213d',
-            letterSpacing: '-0.5px', lineHeight: 1.2, margin: '0 0 12px',
-          }}>
-            Get a professional website built for your business.
+          {/* Logo + badge row */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/wdp365-logo.png" alt="Web Design Pros 365" style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
+            <div style={{ background: 'rgba(139,44,62,0.2)', border: '1px solid rgba(139,44,62,0.4)', borderRadius: '20px', padding: '4px 12px' }}>
+              <span style={{ color: '#f87171', fontSize: '11px', fontWeight: 700, letterSpacing: '1px' }}>25% OFF</span>
+            </div>
+          </div>
+
+          {/* Headline */}
+          <h2 style={{ fontFamily: 'Georgia, serif', fontSize: 'clamp(22px,4vw,28px)', color: '#f8fafc', letterSpacing: '-0.5px', lineHeight: 1.2, margin: '0 0 10px' }}>
+            Your website should work<em style={{ color: '#f87171' }}> as hard as you do.</em>
           </h2>
-          <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.7, margin: '0 0 28px' }}>
-            As part of Christopher Key's community, you get 25% off a new digital website design from Web Design Pros 365. Modern, fast, built to convert.
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.75, margin: '0 0 24px' }}>
+            Web Design Pros 365 builds modern, conversion-focused websites — and engineers them to be found by both Google <em>and AI</em>. When ChatGPT, Perplexity, or Google AI recommend businesses in your space, we make sure yours shows up.
           </p>
 
+          {/* Feature pills */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
+            {[
+              { icon: <Globe size={12} />, label: 'Modern Next.js builds' },
+              { icon: <Eye size={12} />, label: 'AI search visibility' },
+              { icon: <Zap size={12} />, label: 'Built to convert' },
+            ].map(f => (
+              <span key={f.label} style={{
+                display: 'inline-flex', alignItems: 'center', gap: '5px',
+                background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '20px', padding: '5px 12px',
+                color: 'rgba(255,255,255,0.65)', fontSize: '11px', fontWeight: 500,
+              }}>
+                {f.icon} {f.label}
+              </span>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginBottom: '20px' }} />
+
+          {/* Offer callout */}
+          <div style={{ background: 'rgba(139,44,62,0.12)', border: '1px solid rgba(139,44,62,0.25)', borderRadius: '6px', padding: '14px 16px', marginBottom: '20px' }}>
+            <p style={{ margin: 0, fontSize: '13px', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>
+              <strong style={{ color: '#f87171' }}>Christopher Key's community gets 25% off</strong> any new website project. Mention Christopher when you reach out.
+            </p>
+          </div>
+
+          {/* CTA */}
           <a
             href="https://webdesignpros365.com?ref=christiskey"
-            target="_blank" rel="noopener noreferrer"
-            onClick={dismiss}
+            target="_blank" rel="noopener noreferrer" onClick={dismiss}
             style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               padding: '14px 24px', background: '#8b2c3e', color: '#fff',
-              borderRadius: '3px', textDecoration: 'none',
+              borderRadius: '4px', textDecoration: 'none',
               fontWeight: 700, fontSize: '11px', letterSpacing: '1.5px',
               width: '100%', boxSizing: 'border-box',
             }}
           >
-            CLAIM 25% OFF NOW <ArrowUpRight size={15} />
+            GET STARTED — CLAIM 25% OFF <ArrowUpRight size={14} />
           </a>
 
-          <p style={{ fontSize: '11px', color: '#9ca3af', textAlign: 'center', margin: '12px 0 0' }}>
-            Mention Christopher Key when you reach out to redeem.
-          </p>
-
-          <button onClick={dismiss} style={{ display: 'block', background: 'none', border: 'none', color: '#9ca3af', fontSize: '11px', cursor: 'pointer', margin: '14px auto 0', padding: 0 }}>
-            No thanks
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '12px' }}>
+            <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)' }}>webdesignpros365.com</span>
+            <button onClick={dismiss} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.3)', fontSize: '11px', cursor: 'pointer', padding: 0 }}>
+              No thanks
+            </button>
+          </div>
         </div>
       </div>
     </>
