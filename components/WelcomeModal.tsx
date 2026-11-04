@@ -131,9 +131,6 @@ export function WelcomeModal() {
 
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginBottom: '20px' }} />
 
-          <p style={{ fontSize: '10px', letterSpacing: '2px', fontWeight: 700, color: 'rgba(255,255,255,0.3)', margin: '0 0 12px' }}>
-            CHRISTOPHER&apos;S PICKS
-          </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <a
               href="https://masterpeacebyhcs.com/?ref_code=christiskey"
