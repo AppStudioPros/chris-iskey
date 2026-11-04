@@ -175,7 +175,7 @@ export function WelcomeModal() {
         <div style={{ position: 'relative', minHeight: '500px' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/modal-promo.png"
+            src="/images/modal-promo.jpg"
             alt="MasterPeace and IGF-1 products"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />

@@ -49,7 +49,7 @@ export function DiscountModal() {
           {/* Logo + badge row */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/wdp365-logo.png" alt="Web Design Pros 365" style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
+            <img src="/images/wdp365-logo.png" alt="Web Design Pros 365" style={{ height: '32px', width: 'auto', filter: 'invert(1)', opacity: 0.95 }} />
             <div style={{ background: 'rgba(139,44,62,0.2)', border: '1px solid rgba(139,44,62,0.4)', borderRadius: '20px', padding: '4px 12px' }}>
               <span style={{ color: '#f87171', fontSize: '11px', fontWeight: 700, letterSpacing: '1px' }}>25% OFF</span>
             </div>
