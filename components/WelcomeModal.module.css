@@ -44,15 +44,23 @@
 }
 
 .donation {
+  --corner-size: 98px;
+  --corner-ribbon: linear-gradient(132deg, #44091e 4%, #a32c43 27%, #cfa867 28%, #68152d 29%, #4b0e22 42%, transparent 42.5%);
   position: relative;
   isolation: isolate;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 405px;
+  justify-content: center;
   padding: 32px clamp(16px, 1.8vw, 26px);
-  background: var(--promo-navy);
+  background:
+    radial-gradient(ellipse at 52% 48%, #071225b3, transparent 65%),
+    radial-gradient(ellipse at 10% 22%, #32517b63, transparent 44%),
+    radial-gradient(ellipse at 94% 72%, #294b8275, transparent 48%),
+    radial-gradient(ellipse at 62% 16%, #193763, transparent 46%),
+    linear-gradient(155deg, #071229, #101e3b 48%, #07152e 89%);
   color: #fff1d9;
+  text-align: center;
   border-right: 1px solid rgba(226, 193, 112, 0.28);
 }
 
@@ -61,25 +69,60 @@
   content: '';
   position: absolute;
   z-index: -1;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  background: var(--corner-ribbon);
   pointer-events: none;
 }
 
 .donation::before {
-  inset: 0 0 23%;
-  background:
-    linear-gradient(180deg, transparent 49%, var(--promo-navy) 98%),
-    url('/images/modal-rolled-cuff.webp') center 57% / cover no-repeat;
+  inset: 0 0 auto auto;
+  transform: rotate(90deg);
 }
 
 .donation::after {
-  inset: 0 auto auto 0;
-  width: 98px;
-  height: 98px;
-  background:
-    linear-gradient(132deg, #4e0b21 4%, #9e293d 28%, #d3aa63 28.5%, #64142b 30%, #4f0d22 42%, transparent 42.5%);
+  inset: auto auto 0 0;
+  transform: rotate(-90deg);
+}
+
+.flower {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  mask-image: radial-gradient(ellipse closest-side, #000 0%, #000d 30%, #0006 68%, transparent 100%);
+  pointer-events: none;
+}
+
+.flower::before {
+  /* Nineteen equal circles on a staggered triangular grid. */
+  --ring: radial-gradient(circle closest-side, transparent calc(100% - 1.25px), #dfbc7266 calc(100% - 0.8px) calc(100% - 0.35px), transparent 100%);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(240px, 26vw, 330px);
+  aspect-ratio: 6 / 5.4641;
+  transform: translate(-50%, -50%);
+  background-image:
+    var(--ring), var(--ring), var(--ring),
+    var(--ring), var(--ring), var(--ring), var(--ring),
+    var(--ring), var(--ring), var(--ring), var(--ring), var(--ring),
+    var(--ring), var(--ring), var(--ring), var(--ring),
+    var(--ring), var(--ring), var(--ring);
+  background-position:
+    25% 0, 50% 0, 75% 0,
+    12.5% 25%, 37.5% 25%, 62.5% 25%, 87.5% 25%,
+    0 50%, 25% 50%, 50% 50%, 75% 50%, 100% 50%,
+    12.5% 75%, 37.5% 75%, 62.5% 75%, 87.5% 75%,
+    25% 100%, 50% 100%, 75% 100%;
+  background-size: 33.3333% 36.6025%;
+  background-repeat: no-repeat;
 }
 
 .donationCopy {
+  width: 100%;
+  max-width: 245px;
   container-type: inline-size;
 }
 
@@ -102,22 +145,22 @@
 }
 
 .donation h2 span {
-  display: table;
-  padding-bottom: 9px;
-  background: linear-gradient(174deg, transparent 47%, #e2c170 50% 78%, transparent 82%) bottom / 100% 7px no-repeat;
+  display: block;
 }
 
 .donation h2 span::after {
   content: '';
   display: block;
-  height: 5px;
-  margin: 2px 1% -7px 0;
-  background: #e2c170;
-  clip-path: polygon(0 75%, 14% 34%, 28% 40%, 45% 19%, 72% 23%, 87% 10%, 100% 34%, 94% 55%, 74% 61%, 49% 64%, 31% 91%, 18% 81%, 3% 100%);
+  width: 86%;
+  height: 2px;
+  margin: 9px auto 0;
+  background: linear-gradient(90deg, transparent, #b78336 19%, #f5d88e 50%, #b78336 81%, transparent);
+  clip-path: polygon(0 50%, 47% 0, 53% 0, 100% 50%, 53% 100%, 47% 100%);
 }
 
 .donationDescription {
-  margin: 0 0 16px;
+  max-width: 25ch;
+  margin: 0 auto 16px;
   color: #d5deed;
   font-size: 13px;
   line-height: 1.45;
@@ -131,6 +174,7 @@
   padding: 10px 16px;
   border-radius: 3px;
   background: #e2c170;
+  box-shadow: 0 0 17px rgb(226 193 112 / 28%);
   color: #0b1a35;
   font-size: 11px;
   font-weight: 700;
@@ -140,6 +184,7 @@
 
 .donateLink:hover {
   background: #f1d891;
+  box-shadow: 0 0 21px rgb(226 193 112 / 48%);
 }
 
 .close:focus-visible,
@@ -180,27 +225,10 @@
   }
 
   .donation {
-    min-height: 0;
-    padding: 36px 18px 24px 20px;
+    --corner-size: 72px;
+    padding: 32px 18px;
     border-right: 0;
     border-bottom: 1px solid rgba(226, 193, 112, 0.28);
-  }
-
-  .donation::before {
-    inset: 0 0 0 37%;
-    background:
-      linear-gradient(90deg, var(--promo-navy), transparent 55%),
-      linear-gradient(0deg, var(--promo-navy), transparent 37%),
-      url('/images/modal-rolled-cuff.webp') 57% 58% / cover no-repeat;
-  }
-
-  .donation::after {
-    width: 65px;
-    height: 65px;
-  }
-
-  .donationCopy {
-    max-width: 172px;
   }
 
   .newsletter {

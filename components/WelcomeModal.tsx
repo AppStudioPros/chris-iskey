@@ -55,6 +55,7 @@ export function WelcomeModal() {
         </button>
         <div className={styles.grid}>
           <section className={styles.donation} aria-labelledby="welcome-donation-title">
+            <span className={styles.flower} aria-hidden="true" />
             <div className={styles.donationCopy}>
               <p className={styles.donationLabel}>Support Christopher Key</p>
               <h2 id="welcome-donation-title">Keep the <span>work going.</span></h2>
