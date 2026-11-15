@@ -1,10 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useId } from 'react';
 import Link from 'next/link';
 import { X, ArrowUpRight } from 'lucide-react';
 import styles from './WelcomeModal.module.css';
 
 export function WelcomeModal() {
+  const flowerPatternId = useId();
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
@@ -55,7 +56,29 @@ export function WelcomeModal() {
         </button>
         <div className={styles.grid}>
           <section className={styles.donation} aria-labelledby="welcome-donation-title">
-            <span className={styles.flower} aria-hidden="true" />
+            <svg className={styles.flower} aria-hidden="true" focusable="false">
+              <defs>
+                <pattern id={flowerPatternId} x="50%" y="50%" width="45" height="77.942286" patternUnits="userSpaceOnUse">
+                  {/* Include the neighboring circles so their arcs join across the repeat. */}
+                  <g fill="none" stroke="#e6bd68" strokeWidth="0.66">
+                    <circle cx="0" cy="0" r="45" />
+                    <circle cx="45" cy="0" r="45" />
+                    <circle cx="0" cy="77.942286" r="45" />
+                    <circle cx="45" cy="77.942286" r="45" />
+                    <circle cx="-22.5" cy="-38.971143" r="45" />
+                    <circle cx="22.5" cy="-38.971143" r="45" />
+                    <circle cx="67.5" cy="-38.971143" r="45" />
+                    <circle cx="-22.5" cy="38.971143" r="45" />
+                    <circle cx="22.5" cy="38.971143" r="45" />
+                    <circle cx="67.5" cy="38.971143" r="45" />
+                    <circle cx="-22.5" cy="116.913429" r="45" />
+                    <circle cx="22.5" cy="116.913429" r="45" />
+                    <circle cx="67.5" cy="116.913429" r="45" />
+                  </g>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill={`url(#${flowerPatternId})`} />
+            </svg>
             <div className={styles.donationCopy}>
               <p className={styles.donationLabel}>Support Christopher Key</p>
               <h2 id="welcome-donation-title">Keep the <span>work going.</span></h2>
