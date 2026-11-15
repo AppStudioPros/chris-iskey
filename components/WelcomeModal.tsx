@@ -55,11 +55,14 @@ export function WelcomeModal() {
         </button>
         <div className={styles.grid}>
           <section className={styles.donation} aria-labelledby="welcome-donation-title">
-            <h3 id="welcome-donation-title">Support Christopher Key</h3>
-            <p>Help Christopher continue his advocacy and outreach.</p>
-            <Link href="/donate" onClick={dismiss} className={styles.donateLink}>
-              Donate Now
-            </Link>
+            <div className={styles.donationCopy}>
+              <p className={styles.donationLabel}>Support Christopher Key</p>
+              <h2 id="welcome-donation-title">Keep the <span>work going.</span></h2>
+              <p className={styles.donationDescription}>Help Christopher continue his advocacy and outreach.</p>
+              <Link href="/donate" onClick={dismiss} className={styles.donateLink}>
+                Donate Now
+              </Link>
+            </div>
           </section>
 
           <div className={styles.newsletter}>
