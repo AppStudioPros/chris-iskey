@@ -1,0 +1,141 @@
+.modal {
+  --promo-width: 35%;
+  --promo-navy: #0b1a35;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 94%;
+  max-width: 1104px;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 22% minmax(0, 1fr) var(--promo-width);
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: inherit;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: calc(var(--promo-width) + 14px);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #27334b;
+  color: #f0ede4;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: #35435e;
+}
+
+.donation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px clamp(18px, 2.6vw, 34px);
+  background: radial-gradient(ellipse at 22% 25%, #172e52, transparent 72%), var(--promo-navy);
+  color: #f0ede4;
+  border-right: 1px solid rgba(226, 193, 112, 0.28);
+}
+
+.donation h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.donation p {
+  margin: 0 0 20px;
+  color: #d5deed;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.donateLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 3px;
+  background: #e2c170;
+  color: #0b1a35;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.donateLink:hover {
+  background: #f1d891;
+}
+
+.close:focus-visible,
+.donateLink:focus-visible {
+  outline-color: #f1d891;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px clamp(22px, 3vw, 40px) 40px;
+  background: #14213d;
+}
+
+.graphic {
+  display: grid;
+  align-items: center;
+  background: var(--promo-navy);
+}
+
+.graphic img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 820px) {
+  .modal {
+    max-width: 460px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .close {
+    right: 12px;
+  }
+
+  .donation {
+    padding: 24px 56px 24px 22px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(226, 193, 112, 0.28);
+  }
+
+  .donation p {
+    margin-bottom: 14px;
+  }
+
+  .newsletter {
+    padding-block: 28px;
+  }
+}
