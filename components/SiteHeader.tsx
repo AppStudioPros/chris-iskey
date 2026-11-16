@@ -84,6 +84,7 @@ export function SiteHeader() {
 
           .site-header .header-donate {
             display: flex;
+            background-color: #8b2c3e;
             flex-shrink: 0;
             gap: 8px;
             margin-left: auto;
