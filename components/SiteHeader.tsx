@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Heart, Menu, X } from 'lucide-react';
+import { Heart, Menu, X } from 'lucide-react';
 
 const links: [string, string][] = [
   ['Home', '/'],
@@ -29,14 +29,14 @@ export function SiteHeader() {
         </nav>
 
         <a href="https://masterpeacebyhcs.com/christiskey" target="_blank" rel="noopener noreferrer" className="header-cta" style={{ background: 'transparent', border: '2px solid #8b2c3e', color: '#8b2c3e' }}>MASTERPEACE</a>
-        <Link href="/donate" className="header-cta">DONATE <Heart size={16} /></Link>
+        <Link href="/donate" className="header-cta header-donate">DONATE <Heart size={16} aria-hidden="true" /></Link>
 
         {/* Mobile menu button */}
         <button
           className="mobile-menu-btn"
           onClick={() => setOpen(o => !o)}
           aria-label={open ? 'Close menu' : 'Open menu'}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'none', padding: '4px' }}
+          aria-expanded={open}
         >
           {open ? <X size={25} /> : <Menu size={25} />}
         </button>
@@ -77,9 +77,29 @@ export function SiteHeader() {
       )}
 
       <style>{`
-        @media (max-width: 768px) {
-          .mobile-menu-btn { display: flex !important; }
-          .desktop-nav, .header-cta { display: none !important; }
+        .mobile-menu-btn { display: none; }
+
+        @media (max-width: 960px) {
+          .site-header .header-inner { gap: 8px; }
+
+          .site-header .header-donate {
+            display: flex;
+            flex-shrink: 0;
+            gap: 8px;
+            margin-left: auto;
+            padding: 10px 12px;
+          }
+
+          .mobile-menu-btn {
+            display: grid;
+            place-items: center;
+            flex: 0 0 44px;
+            height: 44px;
+            padding: 0;
+            background: none;
+            border: 0;
+            cursor: pointer;
+          }
         }
       `}</style>
     </header>
